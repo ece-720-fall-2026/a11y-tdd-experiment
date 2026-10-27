@@ -130,10 +130,13 @@ test('shows common questions with answers hidden until opened', async ({ page })
   await expect(questions.first()).toBeVisible()
   expect(await questions.count()).toBeGreaterThanOrEqual(3)
   const first = questions.first()
+  const firstId = await first.getAttribute('id')
   const answer = page.locator(`#${(await first.getAttribute('aria-controls'))}`)
   await expect(answer).toBeHidden()
   await first.click()
-  await expect(first).toHaveAttribute('aria-expanded', 'true')
+  // `first` is a lazy locator that re-matches collapsed questions only, so it moves to the next
+  // question once this one opens; check the same button by its id instead.
+  await expect(page.locator(`#${firstId}`)).toHaveAttribute('aria-expanded', 'true')
   await expect(answer).toBeVisible()
 })
 
