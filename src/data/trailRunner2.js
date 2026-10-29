@@ -1,0 +1,71 @@
+export const product = {
+  name: 'Trail Runner 2',
+  path: [
+    { label: 'Shop', href: '/' },
+    { label: 'Trail', href: '/' },
+    { label: 'Trail Runner 2' },
+  ],
+  price: 129,
+  currency: '$',
+  colors: [
+    { id: 'blue', label: 'Blue', hex: '#1f4e9c' },
+    { id: 'black', label: 'Black', hex: '#1a1a1a' },
+    { id: 'grey', label: 'Grey', hex: '#8a8d91' },
+  ],
+  photos: {
+    blue: [
+      { src: '/photos/trail-runner-2-blue-1.svg', alt: 'Trail Runner 2 in blue, side view' },
+      { src: '/photos/trail-runner-2-blue-2.svg', alt: 'Trail Runner 2 in blue, top view' },
+      { src: '/photos/trail-runner-2-blue-3.svg', alt: 'Trail Runner 2 in blue, sole view' },
+    ],
+    black: [
+      { src: '/photos/trail-runner-2-black-1.svg', alt: 'Trail Runner 2 in black, side view' },
+      { src: '/photos/trail-runner-2-black-2.svg', alt: 'Trail Runner 2 in black, top view' },
+      { src: '/photos/trail-runner-2-black-3.svg', alt: 'Trail Runner 2 in black, sole view' },
+    ],
+    grey: [
+      { src: '/photos/trail-runner-2-grey-1.svg', alt: 'Trail Runner 2 in grey, side view' },
+      { src: '/photos/trail-runner-2-grey-2.svg', alt: 'Trail Runner 2 in grey, top view' },
+      { src: '/photos/trail-runner-2-grey-3.svg', alt: 'Trail Runner 2 in grey, sole view' },
+    ],
+  },
+  sizes: [
+    { label: '7', us: 7, eu: 40, soldOut: false },
+    { label: '8', us: 8, eu: 41, soldOut: false },
+    { label: '9', us: 9, eu: 42, soldOut: true },
+    { label: '10', us: 10, eu: 43, soldOut: false },
+    { label: '11', us: 11, eu: 44, soldOut: false },
+    { label: '12', us: 12, eu: 45, soldOut: true },
+  ],
+  // Foot length in cm -> size, used by the size guide.
+  sizeChart: [
+    { cm: 24.0, us: 6, eu: 39 },
+    { cm: 24.5, us: 6.5, eu: 39.5 },
+    { cm: 25.0, us: 7, eu: 40 },
+    { cm: 25.5, us: 7.5, eu: 40.5 },
+    { cm: 26.0, us: 8, eu: 41 },
+    { cm: 26.5, us: 8.5, eu: 41.5 },
+    { cm: 27.0, us: 9, eu: 42 },
+    { cm: 27.5, us: 9.5, eu: 42.5 },
+    { cm: 28.0, us: 10, eu: 43 },
+    { cm: 28.5, us: 10.5, eu: 43.5 },
+    { cm: 29.0, us: 11, eu: 44 },
+    { cm: 29.5, us: 11.5, eu: 44.5 },
+    { cm: 30.0, us: 12, eu: 45 },
+  ],
+  details: 'A lightweight trail runner with a grippy outsole, a breathable mesh upper and a cushioned midsole for long days on rough ground.',
+  reviews: [
+    { author: 'Maya R.', rating: 5, text: 'Grip on wet rock is excellent and they feel light.' },
+    { author: 'Tom K.', rating: 4, text: 'Comfortable out of the box. Runs a touch narrow.' },
+    { author: 'Ines P.', rating: 5, text: 'My go-to shoe for muddy weekend loops.' },
+  ],
+  shipping: 'Free standard shipping on orders over $75. Delivery in 3 to 5 working days. Free returns within 30 days.',
+  faqs: [
+    { q: 'Is Trail Runner 2 waterproof?', a: 'It is water-resistant, not waterproof. It handles puddles and light rain well.' },
+    { q: 'How should I choose my size?', a: 'Use the size guide next to the size list, or order your usual road running size.' },
+    { q: 'What is the drop?', a: 'The heel-to-toe drop is 8 mm.' },
+    { q: 'Can I return worn shoes?', a: 'Returns are accepted within 30 days if the shoes are unworn and in their box.' },
+  ],
+  cartCount: 0,
+  store: 'Stride',
+}

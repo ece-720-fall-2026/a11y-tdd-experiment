@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Trail Runner 2 blue sole">
+  <rect width="800" height="600" fill="#eceef1"/>
+  <ellipse cx="400" cy="480" rx="300" ry="28" fill="#d3d6db"/>
+  <path d="M170 380 Q200 250 330 240 L470 250 Q560 262 610 330 L630 400 Q620 440 560 440 L200 440 Q160 430 170 380 Z" fill="#1f4e9c"/>
+  <path d="M180 440 L620 440 L625 470 L175 470 Z" fill="#2b2b2b"/>
+</svg>
