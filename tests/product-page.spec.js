@@ -55,7 +55,7 @@ function isRound(option) {
   })
 }
 
-const gallery = () => page.getByRole('region', { name: /photos|gallery/i })
+const gallery = (page) => page.getByRole('region', { name: /photos|gallery/i })
 const visiblePhoto = (page) => gallery(page).locator('img:visible').first()
 
 // --- Store ---------------------------------------------------------------
@@ -172,7 +172,10 @@ test('size list opens on demand, hides sold-out sizes and shows the chosen size'
   // Sold-out sizes are exposed to assistive tech and cannot be picked.
   const soldOut = page.getByRole('option').and(page.locator('[aria-disabled="true"]')).first()
   await expect(soldOut).toBeVisible()
-  await soldOut.click()
+  // The option is deliberately marked aria-disabled, which Playwright refuses
+  // to click by default (it waits for it to become enabled), so bypass the
+  // actionability check to prove the app still ignores the sold-out size.
+  await soldOut.click({ force: true })
   await expect(combobox).toContainText(/select|choose/i)
 
   // Picking an available size closes the list and shows only that size.
