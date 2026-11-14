@@ -1,0 +1,75 @@
+
+Running 36 tests using 2 workers
+
+(node:65956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:65957) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/36] [chromium] › score/structure.spec.js:17:1 › page-title
+[2/36] [chromium] › score/axe.spec.js:5:1 › axe
+[3/36] [chromium] › score/structure.spec.js:22:1 › page-h1
+[4/36] [chromium] › score/structure.spec.js:29:1 › page-landmarks
+[5/36] [chromium] › score/structure.spec.js:36:1 › page-headings
+[6/36] [chromium] › score/structure.spec.js:51:1 › page-skip
+  1) [chromium] › score/structure.spec.js:51:1 › page-skip ─────────────────────────────────────────
+
+    Error: first focusable element is a "Stride", not a skip link
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ok"
+    Received: "first focusable element is a \"Stride\", not a skip link"
+
+      62 |     return 'ok'
+      63 |   })
+    > 64 |   expect(result, result).toBe('ok')
+         |                          ^
+      65 | })
+      66 |
+      67 | // ---------- Breadcrumb ----------
+        at /private/var/folders/44/r648wlrn1559yt2tlmvzpygc0000gp/T/tmp.pACqJa4Ur7/app/score/structure.spec.js:64:26
+
+    Error Context: test-results/structure-page-skip-chromium/error-context.md
+
+
+(node:66353) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/36] [chromium] › score/structure.spec.js:71:1 › crumb-nav
+[8/36] [chromium] › score/structure.spec.js:76:1 › crumb-links
+[9/36] [chromium] › score/structure.spec.js:87:1 › crumb-current
+[10/36] [chromium] › score/structure.spec.js:97:1 › car-region
+[11/36] [chromium] › score/structure.spec.js:104:1 › car-alt
+[12/36] [chromium] › score/structure.spec.js:130:1 › tip-trigger
+[13/36] [chromium] › score/structure.spec.js:152:1 › col-group-label
+[14/36] [chromium] › score/structure.spec.js:157:1 › col-state
+[15/36] [chromium] › score/structure.spec.js:182:1 › size-collapsed
+[16/36] [chromium] › score/structure.spec.js:191:1 › size-expanded
+[17/36] [chromium] › score/structure.spec.js:203:1 › size-soldout-disabled
+[18/36] [chromium] › score/structure.spec.js:235:1 › dlg-role
+[19/36] [chromium] › score/structure.spec.js:241:1 › dlg-name
+[20/36] [chromium] › score/structure.spec.js:247:1 › dlg-close-button
+[21/36] [chromium] › score/structure.spec.js:252:1 › dlg-input-label
+[22/36] [chromium] › score/structure.spec.js:259:1 › dlg-unit-label
+[23/36] [chromium] › score/structure.spec.js:268:1 › dlg-result
+[24/36] [chromium] › score/structure.spec.js:276:1 › qty-label
+[25/36] [chromium] › score/structure.spec.js:282:1 › qty-buttons
+[26/36] [chromium] › score/structure.spec.js:292:1 › wish-name
+[27/36] [chromium] › score/structure.spec.js:296:1 › wish-pressed
+[28/36] [chromium] › score/structure.spec.js:312:1 › tabs-tablist
+[29/36] [chromium] › score/structure.spec.js:322:1 › tabs-selected
+[30/36] [chromium] › score/structure.spec.js:333:1 › tabs-one-panel
+[31/36] [chromium] › score/structure.spec.js:343:1 › tabs-panel
+[32/36] [chromium] › score/structure.spec.js:361:1 › acc-operable
+[33/36] [chromium] › score/structure.spec.js:369:1 › acc-state
+[34/36] [chromium] › score/structure.spec.js:377:1 › acc-association
+[35/36] [chromium] › score/structure.spec.js:390:1 › vis-reflow
+[36/36] [chromium] › score/structure.spec.js:397:1 › vis-error-announced
+  1 failed
+    [chromium] › score/structure.spec.js:51:1 › page-skip ──────────────────────────────────────────
+  35 passed (30.9s)

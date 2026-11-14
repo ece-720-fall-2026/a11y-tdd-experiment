@@ -1,0 +1,188 @@
+
+Running 36 tests using 2 workers
+
+(node:78103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:78104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/36] [chromium] › score/structure.spec.js:17:1 › page-title
+[2/36] [chromium] › score/axe.spec.js:5:1 › axe
+[3/36] [chromium] › score/structure.spec.js:22:1 › page-h1
+  1) [chromium] › score/structure.spec.js:22:1 › page-h1 ───────────────────────────────────────────
+
+    Error: the h1 is not the product name
+
+    expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('heading', { level: 1 })
+    Expected pattern: /trail runner 2/i
+    Received string:  "Stride"
+    Timeout: 1000ms
+
+    Call log:
+      - the h1 is not the product name getByRole('heading', { level: 1 }) with timeout 1000ms
+      - waiting for getByRole('heading', { level: 1 })
+        11 × locator resolved to <h1>Stride</h1>
+           - unexpected value "Stride"
+
+
+      24 |   const n = await h1.count()
+      25 |   expect(n, `found ${n} level-1 headings`).toBe(1)
+    > 26 |   await expect(h1, 'the h1 is not the product name').toContainText(/trail runner 2/i, { timeout: 1_000 })
+         |                                                      ^
+      27 | })
+      28 |
+      29 | test('page-landmarks', async ({ page }) => {
+        at /private/var/folders/44/r648wlrn1559yt2tlmvzpygc0000gp/T/tmp.JTUjXTCht9/app/score/structure.spec.js:26:54
+
+    Error Context: test-results/structure-page-h1-chromium/error-context.md
+
+
+(node:78163) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[4/36] [chromium] › score/structure.spec.js:29:1 › page-landmarks
+[5/36] [chromium] › score/structure.spec.js:36:1 › page-headings
+[6/36] [chromium] › score/structure.spec.js:51:1 › page-skip
+  2) [chromium] › score/structure.spec.js:51:1 › page-skip ─────────────────────────────────────────
+
+    Error: first focusable element is a "Stride", not a skip link
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ok"
+    Received: "first focusable element is a \"Stride\", not a skip link"
+
+      62 |     return 'ok'
+      63 |   })
+    > 64 |   expect(result, result).toBe('ok')
+         |                          ^
+      65 | })
+      66 |
+      67 | // ---------- Breadcrumb ----------
+        at /private/var/folders/44/r648wlrn1559yt2tlmvzpygc0000gp/T/tmp.JTUjXTCht9/app/score/structure.spec.js:64:26
+
+    Error Context: test-results/structure-page-skip-chromium/error-context.md
+
+
+(node:78213) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/36] [chromium] › score/structure.spec.js:71:1 › crumb-nav
+[8/36] [chromium] › score/structure.spec.js:76:1 › crumb-links
+[9/36] [chromium] › score/structure.spec.js:87:1 › crumb-current
+[10/36] [chromium] › score/structure.spec.js:97:1 › car-region
+[11/36] [chromium] › score/structure.spec.js:104:1 › car-alt
+[12/36] [chromium] › score/structure.spec.js:130:1 › tip-trigger
+  3) [chromium] › score/structure.spec.js:130:1 › tip-trigger ──────────────────────────────────────
+
+    Error: no button named like taxes/price/info
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      132 |   expect(await bare.count(), 'a button is named just "i"').toBe(0)
+      133 |   const trigger = page.getByRole('button', { name: /tax|price|info|detail/i })
+    > 134 |   expect(await trigger.count(), 'no button named like taxes/price/info').toBeGreaterThan(0)
+          |                                                                          ^
+      135 | })
+      136 |
+      137 | // ---------- Color ----------
+        at /private/var/folders/44/r648wlrn1559yt2tlmvzpygc0000gp/T/tmp.JTUjXTCht9/app/score/structure.spec.js:134:74
+
+    Error Context: test-results/structure-tip-trigger-chromium/error-context.md
+
+
+(node:78337) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[13/36] [chromium] › score/structure.spec.js:152:1 › col-group-label
+[14/36] [chromium] › score/structure.spec.js:157:1 › col-state
+[15/36] [chromium] › score/structure.spec.js:183:1 › size-collapsed
+[16/36] [chromium] › score/structure.spec.js:192:1 › size-expanded
+[17/36] [chromium] › score/structure.spec.js:204:1 › size-soldout-disabled
+[18/36] [chromium] › score/structure.spec.js:236:1 › dlg-role
+[19/36] [chromium] › score/structure.spec.js:242:1 › dlg-name
+[20/36] [chromium] › score/structure.spec.js:248:1 › dlg-close-button
+[21/36] [chromium] › score/structure.spec.js:253:1 › dlg-input-label
+[22/36] [chromium] › score/structure.spec.js:260:1 › dlg-unit-label
+[23/36] [chromium] › score/structure.spec.js:269:1 › dlg-result
+  4) [chromium] › score/structure.spec.js:269:1 › dlg-result ───────────────────────────────────────
+
+    Error: no live region or output element in the dialog
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      270 |   const dialog = await openGuide(page)
+      271 |   const live = dialog.locator('[aria-live]:not([aria-live="off"]), [role="status"], [role="alert"], output')
+    > 272 |   expect(await live.count(), 'no live region or output element in the dialog').toBeGreaterThan(0)
+          |                                                                                ^
+      273 | })
+      274 |
+      275 | // ---------- Quantity ----------
+        at /private/var/folders/44/r648wlrn1559yt2tlmvzpygc0000gp/T/tmp.JTUjXTCht9/app/score/structure.spec.js:272:80
+
+    Error Context: test-results/structure-dlg-result-chromium/error-context.md
+
+
+(node:78508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[24/36] [chromium] › score/structure.spec.js:277:1 › qty-label
+[25/36] [chromium] › score/structure.spec.js:283:1 › qty-buttons
+[26/36] [chromium] › score/structure.spec.js:293:1 › wish-name
+[27/36] [chromium] › score/structure.spec.js:297:1 › wish-pressed
+[28/36] [chromium] › score/structure.spec.js:313:1 › tabs-tablist
+[29/36] [chromium] › score/structure.spec.js:323:1 › tabs-selected
+[30/36] [chromium] › score/structure.spec.js:334:1 › tabs-one-panel
+[31/36] [chromium] › score/structure.spec.js:344:1 › tabs-panel
+[32/36] [chromium] › score/structure.spec.js:362:1 › acc-operable
+[33/36] [chromium] › score/structure.spec.js:370:1 › acc-state
+[34/36] [chromium] › score/structure.spec.js:378:1 › acc-association
+  5) [chromium] › score/structure.spec.js:378:1 › acc-association ──────────────────────────────────
+
+    Error: 4 question buttons have no aria-controls pointing to an existing element
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 4
+
+      384 |     return !id || !document.getElementById(id)
+      385 |   }).length)
+    > 386 |   expect(broken, `${broken} question buttons have no aria-controls pointing to an existing element`).toBe(0)
+          |                                                                                                      ^
+      387 | })
+      388 |
+      389 | // ---------- Perception ----------
+        at /private/var/folders/44/r648wlrn1559yt2tlmvzpygc0000gp/T/tmp.JTUjXTCht9/app/score/structure.spec.js:386:102
+
+    Error Context: test-results/structure-acc-association-chromium/error-context.md
+
+
+(node:78666) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[35/36] [chromium] › score/structure.spec.js:391:1 › vis-reflow
+[36/36] [chromium] › score/structure.spec.js:398:1 › vis-error-announced
+  5 failed
+    [chromium] › score/structure.spec.js:22:1 › page-h1 ────────────────────────────────────────────
+    [chromium] › score/structure.spec.js:51:1 › page-skip ──────────────────────────────────────────
+    [chromium] › score/structure.spec.js:130:1 › tip-trigger ───────────────────────────────────────
+    [chromium] › score/structure.spec.js:269:1 › dlg-result ────────────────────────────────────────
+    [chromium] › score/structure.spec.js:378:1 › acc-association ───────────────────────────────────
+  31 passed (34.7s)
